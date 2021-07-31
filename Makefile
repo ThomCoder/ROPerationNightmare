@@ -18,3 +18,6 @@ run:
 
 attach:
 	docker exec -it roperation /bin/bash
+
+binary:
+	gcc -Wl,-z,norelro main.c
