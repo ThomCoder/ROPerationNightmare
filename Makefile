@@ -20,4 +20,4 @@ attach:
 	docker exec -it roperation /bin/bash
 
 binary:
-	gcc -Wl,-z,norelro -fno-stack-protector main.c
+	gcc -Wl,-z,norelro -fno-stack-protector -no-pie main.c
