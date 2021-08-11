@@ -11,10 +11,10 @@ stop:
 	-docker stop roperation
 
 build:
-	docker build -t roperation . --platform=linux/amd64
+	docker build -t roperation .
 
 run:
-	docker run --rm -v $(CURDIR):/home/user --cap-add=SYS_PTRACE --platform=linux/amd64 --security-opt seccomp=unconfined -d --name roperation -i roperation
+	docker run --rm -v $(CURDIR):/home/user --cap-add=SYS_PTRACE --security-opt seccomp=unconfined -d --name roperation -i roperation
 
 attach:
 	docker exec -it roperation /bin/bash
