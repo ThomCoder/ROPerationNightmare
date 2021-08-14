@@ -2,7 +2,7 @@
 FROM ubuntu:20.04
 ENV LC_CTYPE C.UTF-8
 ARG DEBIAN_FRONTEND=noninteractive
-RUN apt-get update && apt-get install -yq gcc make build-essential python3 python3-pip binutils patchelf python3-dev git libssl-dev libffi-dev gdb curl wget cmake
+RUN apt-get update && apt-get install -yq gcc make build-essential python3 python3-pip binutils patchelf python3-dev git libssl-dev libffi-dev gdb curl wget cmake tmux
 RUN python3 -m pip install --upgrade pip
 RUN python3 -m pip install --upgrade pwntools keystone-engine ropper capstone unicorn
 RUN useradd -ms /bin/bash user
