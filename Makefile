@@ -17,7 +17,7 @@ run:
 	docker run --rm -v $(CURDIR):/home/user --cap-add=SYS_PTRACE --security-opt seccomp=unconfined -d --name roperation -i roperation
 
 attach:
-	docker exec -it roperation /bin/bash
+	docker exec -it roperation /bin/bash -c "tmux"
 
 binary:
 	rm ./vuln && gcc -Wl,-z,norelro -fno-stack-protector -no-pie -O0 main.c -o vuln
