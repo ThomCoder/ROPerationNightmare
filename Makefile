@@ -20,4 +20,4 @@ attach:
 	docker exec -it roperation /bin/bash -c "tmux"
 
 binary:
-	rm ./vuln && gcc -Wl,-z,norelro -fno-stack-protector -no-pie -O0 main.c -o vuln
+	rm ./vuln && gcc -Wl,-z,norelro -fno-stack-protector -no-pie -O0 main.c -g -o vuln
