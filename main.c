@@ -2,7 +2,7 @@
 
 void echo(void)
 {
-	char buf[1000];
+	char buf[10];
 	scanf("%s", buf);
 	printf("%s\n", buf);
 }
